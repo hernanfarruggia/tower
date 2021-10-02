@@ -1,0 +1,123 @@
+<div class="tower-header-image">
+    <div class="section-feature">
+        <div class="tower-header-message">
+            <div  class="tower-header-message_text-box">
+                <span style="text-transform: uppercase; font-size: 28px; font-family: 'Gotham Rounded Light'; letter-spacing: 10px;">M&aacute;s de</span>
+                <span style="text-transform: uppercase; font-size: 130px; font-family: 'Gotham Rounded Medium'; line-height: 120px;">20</span>
+                <span style="text-transform: uppercase; font-size: 30px; font-family: 'Gotham Rounded Light'; letter-spacing: 26px;">a&ntilde;os</span>
+                <span style="font-size: 25px; font-weight: bold; font-family: 'Gotham Rounded Medium'; letter-spacing: 5px;">brindando</span>
+                <span style="font-size: 30px; font-weight: bold; font-family: 'Gotham Rounded Medium'; letter-spacing: 5px;">servicios</span>
+                <span style="font-size: 23px; font-weight: bold; font-family: 'Gotham Rounded Medium'; letter-spacing: 3px;">de internet</span>
+                <span style="font-size: 22px; font-weight: bold; font-family: 'Gotham Rounded Medium'; letter-spacing: 3px;">en la ciudad</span>
+            </div>
+            <div class="tower-header-message_text-box tower-header-message_text-box-small">
+                <span style="text-transform: uppercase; font-size: 32px; font-weight: bold;font-family: 'Gotham Rounded Medium'; letter-spacing: 5px;">Siempre</span>
+                <span style="text-transform: uppercase; font-size: 20px; font-family: 'Gotham Rounded Light'; letter-spacing: 3px;">cerca suyo</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container--tower">
+    <div class="container--tower-primary">
+        <div class="container--tower-secondary">
+            <div class="feature-tower" ng-repeat="sectionFeature in sectionFeatures" ng-click="openModal(sectionFeature.modalTemplate)">
+                <div class="feature-tower--content">
+                    <div class="feature-tower--icon" ng-class="sectionFeature.iconClass"></div>
+                    <p class="feature-tower--description">{{sectionFeature.description}}</p>
+                    <a class="feature-tower--button button-tower-primary">
+                        {{sectionFeature.button.content}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<modal modal-control="modalControl"></modal>
+
+<div class="container">
+    <div class="container-secondary">
+        <div class="downloads">
+            <a class="downloads--item" target="_blank" href="assets/files/tower-beneficios.pdf">
+                <div class="downloads--item-icon"></div>
+                <div class="downloads--item-text">
+                    Beneficios
+                </div>
+            </a>
+            <div class="downloads--item-separator"></div>
+            <a class="downloads--item" target="_blank" href="https://beneficios.lacapital.com.ar/compras/tecno/174_%40Tower/">
+                <div class="downloads--item-icon"></div>
+                <div class="downloads--item-text">
+                    Promociones
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container--tower container--tower_contact" id="contacto">
+    <div class="container--tower-primary">
+        <div class="container--tower-secondary">
+            <div class="section-details-tower">
+                <div class="section-details-tower--title">
+                    <h2 class="section-details-tower--title-text">Envianos tu Consulta</h2>
+                </div>
+            </div>
+            <div class="form-tower">
+                <div class="fieldset">
+                    <div class="fieldset-label">
+                        Nombre y Apellido *
+                    </div>
+                    <div class="fieldset-input">
+                        <input class="input" type="text" ng-model="contactForm.fullName" />
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <div class="fieldset-label">
+                        Email *
+                    </div>
+                    <div class="fieldset-input">
+                        <input class="input" type="text" ng-model="contactForm.email" />
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <div class="fieldset-label">
+                        Asunto *
+                    </div>
+                    <div class="fieldset-input">
+                        <input class="input" type="text" ng-model="contactForm.subject" />
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <div class="fieldset-label">
+                        Mensaje *
+                    </div>
+                    <div class="fieldset-input">
+                        <textarea class="input" ng-model="contactForm.message" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="filedset">
+                    <div class="fieldset_right-align">
+                        <button class="button" type="button" ng-click="validateContactForm()">ENVIAR</button>
+                    </div>
+                    <div ng-class="{'fieldset_right-align': true, 'fieldset_success': formSuccess, 'fieldset_error': formError}"
+                    ng-bind="formMessage"></div>
+                </div>
+            </div>
+            <div class="sub-section-separator_tower">
+                <img class="sub-section-separator_tower--icon" src="assets/img/icons/envelop.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-6255060-12', 'auto');
+    ga('send', 'pageview');
+</script>

@@ -1,0 +1,7 @@
+<nav ng-class="getTabClassName()">
+    <ul class="tab-navigation--items">
+        <li class="tab-navigation--item" ng-repeat="navigationItem in navigationItems">
+            <a ui-sref="{{navigationItem.link.path}}" ui-sref-active="tab-navigation--item-link_active" class="tab-navigation--item-link">{{navigationItem.link.content}}</a>
+        </li>
+    </ul>
+</nav>

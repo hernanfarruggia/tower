@@ -1,0 +1,80 @@
+<form class="form" id="rrhhForm">
+    <fieldset class="form--fieldset">
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Nombre y Apellido *</div>
+                <input class="form--input" type="text" ng-model="forms.rrhh.fields.fullName">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Email *</div>
+                <input class="form--input" type="text" ng-model="forms.rrhh.fields.email">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Tel&eacute;fono *</div>
+                <input class="form--input" type="text" ng-model="forms.rrhh.fields.phone">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">DNI *</div>
+                <input class="form--input" type="text" ng-model="forms.rrhh.fields.idNumber">
+            </label>
+        </div>
+        <div class="form--element">
+            <span class="form--label">
+                <div class="form--label-text">G&eacute;nero *</div>
+                <div class="form--radio-group">
+                    <label class="form--radio-group-item form--label-text form--label-text_radio">
+                        <input class="form--radio-group-item-input" type="radio" ng-model="forms.rrhh.fields.gender" value="masculino">Masculino
+                    </label>
+                    <label class="form--radio-group-item  form--label-text form--label-text_radio">
+                        <input class="form--radio-group-item-input" type="radio" ng-model="forms.rrhh.fields.gender" value="femenino">Femenino
+                    </label>
+                </div>
+            </span>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">&Aacute;rea de inter&eacute;s *</div>
+                <select class="form--select" ng-model="forms.rrhh.fields.interests">
+                    <option selected="selected" disabled="disabled">Seleccione su &aacute;rea de inter&eacute;s</option>
+                    <option value="administracion">Administraci&oacute;n</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="ingenieria">Ingenier&iacute;a</option>
+                    <option value="tecnica">T&eacute;cnica</option>
+                    <option value="operaciones">Operaciones</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">URL: CV, Portfolio o Demo Reel</div>
+                <input class="form--input" type="text" ng-model="forms.rrhh.fields.video">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Adjuntar CV *</div>
+                <!--TODO: Style this according the comp.-->
+                <input type="file" onchange="angular.element(this).scope().setFile(this)"
+                    accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf, text/plain">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Escribe un comentario *</div>
+                <textarea class="form--input" ng-model="forms.rrhh.fields.comments" cols="30" rows="10"></textarea>
+            </label>
+        </div>
+    </fieldset>
+    <div ng-class="{'form--element': true, 'form--element_left-align': true,'form--element_success': formSuccess, 'form--element_error': formError}"
+        ng-bind="formMessage"></div>
+    <div class="form--element form--element_right-align">
+        <button class="button-quaternary" type="button" ng-click="validateForm('rrhh')">Enviar</button>
+    </div>
+</form>

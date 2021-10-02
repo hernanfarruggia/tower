@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" ng-app="transdatosWeb">
+<head>
+    <meta charset="UTF-8">
+    <title ng-cloak>Transdatos Web - {{title}}</title>
+
+    <meta name="description" content="{{description}}" ng-cloak/>
+
+    <link rel="stylesheet" href="assets/vendors/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/app2.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="primary-navigation">
+            <div class="primary-navigation--logo">
+                <img src="assets/img/transdatos-logo.svg" alt="Transdatos Logo">
+            </div>
+            <ul class="primary-navigation--menu">
+                <li class="primary-navigation--menu-item">
+                    <a ui-sref="home" ui-sref-active="primary-navigation--menu-item-link_active" class="primary-navigation--menu-item-link">Home</a>
+                </li>
+                <li class="primary-navigation--menu-item">
+                    <a ui-sref="about" ui-sref-active="primary-navigation--menu-item-link_active" class="primary-navigation--menu-item-link">Nosotros</a>
+                </li>
+                <li class="primary-navigation--menu-item">
+                    <a ui-sref="solutions" ui-sref-active="primary-navigation--menu-item-link_active" class="primary-navigation--menu-item-link">Soluciones</a>
+                </li>
+                <li class="primary-navigation--menu-item">
+                    <a ui-sref="services" ui-sref-active="primary-navigation--menu-item-link_active" class="primary-navigation--menu-item-link">Servicios</a>
+                </li>
+                <li class="primary-navigation--menu-item">
+                    <a href="http://www.tower.com.ar" target="_blank" class="primary-navigation--menu-item-link">@Tower</a>
+                </li>
+                <li class="primary-navigation--menu-item">
+                    <a ui-sref="contact" ui-sref-active="primary-navigation--menu-item-link_active" class="primary-navigation--menu-item-link">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <ui-view></ui-view>
+
+    <footer class="footer">
+        <div class="footer--container">
+            <p class="footer--active-members">Transdatos es miembro activo de las siguientes organizaciones:
+                <span class="footer--active-members-member">
+                    <a class="footer--active-members-link" href="http://www.polotecnologico.net/" target="_blank">
+                        Polo Tecnol&oacute;gico Rosario
+                    </a>
+                </span>,
+                <span class="footer--active-members-member">
+                    <a class="footer--active-members-link" href="http://www.cabase.org.ar/" target="_blank">
+                        C&aacute;mara Argentina de Internet
+                    </a>
+                </span>.
+            </p>
+            <div class="grid">
+                <div class="footer--copy grid--column grid--column_40">
+                    <div class="footer--copy-data-fiscal">
+                        <a href="http://qr.afip.gob.ar/?qr=SeE4E3eDCUCHsHVWkOGu-w,," target="_F960AFIPInfo">
+                            <img class="footer--copy-data-fiscal-image" src="assets/img/data-fiscal.jpg" alt="Data Fiscal">
+                        </a>
+                    </div>
+                    <div class="footer--copy-text-items">
+                        <p class="footer--copy-item">&copy;2007 Transdatos S.A.</p>
+                        <p class="footer--copy-item">C&oacute;rdoba 1452 (Palacio Minetti) Pisos 11 y 12.</p>
+                        <p class="footer--copy-item">S2000AWV Rosario.</p>
+                        <p class="footer--copy-item">Administraci&oacute;n: +54 341 527-0500 / 1594 / 1593</p>
+                        <p class="footer--copy-item">Ventas: +54 341 527-1397</p>
+                        <p class="footer--copy-item">contacto@transdatos.com.ar</p>
+                        <div class="footer--copy-social-media">
+                            <!-- TODO: Put actual links-->
+                            <a href="https://www.linkedin.com/company/15211588" target="_blank"><img class="footer--copy-social-media-item" src="assets/img/logos/linkedin.png" alt="Perfil de LinkedIn de Transdatos"></a>
+                            <a href="#"><img class="footer--copy-social-media-item" src="assets/img/logos/facebook.png" alt="Perfil de Facebook de Transdatos"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer--navigation grid--column grid--column_60">
+                    <nav class="secondary-navigation">
+                        <dl class="secondary-navigation--menu">
+                            <dt class="secondary-navigation--menu-category">
+                                <a ui-sref="home" class="secondary-navigation--menu-item-link">Home</a>
+                            </dt>
+                        </dl>
+                        <dl class="secondary-navigation--menu">
+                            <dt class="secondary-navigation--menu-category">
+                                <a ui-sref="about" href="#" class="secondary-navigation--menu-item-link">Nosotros</a>
+                            </dt>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="about.about-us" class="secondary-navigation--menu-item-link">Qui&eacute;nes somos</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="about.history" class="secondary-navigation--menu-item-link">Historia</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="about.csr" class="secondary-navigation--menu-item-link">RSE</a>
+                            </dd>
+                        </dl>
+                        <dl class="secondary-navigation--menu">
+                            <dt class="secondary-navigation--menu-category">
+                                <a ui-sref="solutions" class="secondary-navigation--menu-item-link">Soluciones</a>
+                            </dt>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="solutions.engineering" class="secondary-navigation--menu-item-link">Industrias y Empresas de servicios</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="solutions.pymes" class="secondary-navigation--menu-item-link">Pymes y Profesionales</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="solutions.telcos" class="secondary-navigation--menu-item-link">Telcos</a>
+                            </dd>
+                        </dl>
+                        <dl class="secondary-navigation--menu">
+                            <dt class="secondary-navigation--menu-category">
+                                <a ui-sref="services" class="secondary-navigation--menu-item-link">Servicios</a>
+                            </dt>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="services.networking" class="secondary-navigation--menu-item-link">Redes</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="services.engineering" class="secondary-navigation--menu-item-link">Ingenier&iacute;a</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="services.maintenance" class="secondary-navigation--menu-item-link">Mantenimiento</a>
+                            </dd>
+                            <dd class="secondary-navigation--menu-item">
+                                <a ui-sref="services.buildings" class="secondary-navigation--menu-item-link">Construcciones</a>
+                            </dd>
+                        </dl>
+                        <dl class="secondary-navigation--menu">
+                            <dt class="secondary-navigation--menu-category">
+                                <a ui-sref="contact" class="secondary-navigation--menu-item-link">Contacto</a>
+                            </dt>
+                        </dl>
+                        <dl class="secondary-navigation--menu">
+                            <dt class="secondary-navigation--menu-category">
+                                <a href="https://correo.transdatos.net.ar" target="_blank" class="secondary-navigation--menu-item-link">WEBMAIL3</a>
+                            </dt>
+                        </dl>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer--crafted-by">
+                <p class="footer--crafted-by-item">
+                    <span class="footer--crafted-by-item-text">Diseño</span> <img class="footer--crafted-by-item-image" src="assets/img/logos/be-design.png" alt="BE Design" title="Boldt Eric Design">
+                </p>
+                <p class="footer--crafted-by-item">
+                    <span class="footer--crafted-by-item-text">Desarrollo</span> <a href="http://www.estudiobolonia.com" target="_blank"><img class="footer--crafted-by-item-image" src="assets/img/logos/estudio-bolonia.png" alt="Estudio Bolonia" title="Estudio Bolonia"></a>
+                </p>
+            </div>
+            <back-to-top tower="false"></back-to-top>
+        </div>
+    </footer>
+
+    <script src="assets/vendors/lightbox2/js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-6255060-12', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

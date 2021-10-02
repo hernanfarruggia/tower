@@ -1,0 +1,33 @@
+<form class="form contactForm">
+    <fieldset class="form--fieldset">
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Nombre y Apellido *</div>
+                <input class="form--input" type="text" ng-model="forms.contact.fields.fullName">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Email *</div>
+                <input class="form--input" type="text" ng-model="forms.contact.fields.email">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">Asunto *</div>
+                <input class="form--input" type="text" ng-model="forms.contact.fields.subject">
+            </label>
+        </div>
+        <div class="form--element">
+            <label class="form--label">
+                <div class="form--label-text">¿C&oacute;mo podemos ayudarlo? *</div>
+                <textarea class="form--input" cols="30" rows="10" ng-model="forms.contact.fields.message"></textarea>
+            </label>
+        </div>
+    </fieldset>
+    <div ng-class="{'form--element': true, 'form--element_left-align': true, 'form--element_success': formSuccess, 'form--element_error': formError}"
+        ng-bind="formMessage"></div>
+    <div class="form--element form--element_right-align">
+        <button class="button-quaternary" type="button" ng-click="validateForm('contact')">Enviar</button>
+    </div>
+</form>

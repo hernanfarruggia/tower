@@ -1,0 +1,22 @@
+<div class="hero-slider">
+    <div class="hero-slider--control">
+        <div class="hero-slider--control_previous">
+            <button class="hero-slider--control_previous-button" type="button" ng-click="showPreviousImage()">Imagen anterior</button>
+        </div>
+        <div class="hero-slider--control_next">
+            <button class="hero-slider--control_next-button" type="button" ng-click="showNextImage()">Imagen siguiente</button>
+        </div>
+    </div>
+    <ul class="hero-slider--items">
+        <li class="hero-slider--item" ng-repeat="heroSliderItem in heroSliderItems" style="background-image: url({{heroSliderItem.imageSource}});">
+            <div class="hero-slider--item-copy">
+                <div class="hero-slider--item-copy-container">
+                    <p class="hero-slider--item-copy-title">{{heroSliderItem.title}}</p>
+                    <!--h2 class="hero-slider--item-copy-subtitle">{{heroSliderItem.subtitle}}</h2-->
+                    <p class="hero-slider--item-copy-text" ng-repeat="copyTextItem in heroSliderItem.copyText">{{copyTextItem}}</p>
+                    <a class="button-primary" ng-show="{{heroSliderItem.button}}" href="{{heroSliderItem.button.path}}">{{heroSliderItem.button.text}}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
