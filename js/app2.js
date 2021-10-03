@@ -372,7 +372,7 @@
                 },
                 modalId: "test",
                 modalTemplate: "components/tower/modals/wireless.html",
-                description: "Servicios inalámbricos dedicados",
+                description: "Servicio de Internet Inalámbrico",
                 iconClass: "feature-tower--wireless"
             }, 
             {
