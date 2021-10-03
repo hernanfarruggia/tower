@@ -1345,6 +1345,10 @@ body {
     background: url(../../assets/img/icons/dedicated-hover.png) center no-repeat
 }
 
+.feature-tower:hover .feature-tower--optic-fiber {
+    background: url(../../assets/img/icons/fiber-hover.png) center no-repeat
+}
+
 .feature-tower:hover .feature-tower--wireless {
     background: url(../../assets/img/icons/wireless-hover.png) center no-repeat
 }
@@ -1375,6 +1379,14 @@ body {
 
 .feature-tower--dedicated_big {
     background: url(../../../assets/img/icons/dedicated-big.png) center no-repeat
+}
+
+.feature-tower--optic-fiber {
+    background: url(../../assets/img/icons/fiber.png) center no-repeat
+}
+
+.feature-tower--optic-fiber_big {
+    background: url(../../../assets/img/icons/fiber-big.png) center no-repeat
 }
 
 .feature-tower--wireless {
@@ -1410,6 +1422,12 @@ body {
 .feature-tower--button {
     -webkit-transition: background-color .3s;
     transition: background-color .3s
+}
+
+.button-pay-tower {
+    border-color: red;
+    color: red;
+    text-decoration: none;
 }
 
 @media screen and (max-width:1024px) {
@@ -1453,12 +1471,24 @@ body {
 }
 
 .downloads--item-icon {
-    background: url(../../assets/img/icons/pdf.png) center no-repeat;
+    /* background: url(../../assets/img/icons/pdf.png) center no-repeat; */
     display: inline-block;
     height: 96px;
     margin-right: 25px;
     vertical-align: middle;
     width: 96px
+}
+
+.downloads--item-icon-discount {
+    background: url(../../assets/img/icons/benefit.png) no-repeat center;
+}
+
+.downloads--item-icon-webmail {
+    background: url(../../assets/img/icons/mail.png) no-repeat center;
+}
+
+.downloads--item-icon-payment {
+    background: url(../../assets/img/icons/pay.png) no-repeat center;
 }
 
 .downloads--item-text {
@@ -1925,6 +1955,7 @@ summary {
 
 .modal {
     background-color: #fff;
+    border-radius: 8px;
     left: 17%;
     padding: 20px;
     position: absolute;

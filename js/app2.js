@@ -177,7 +177,8 @@
                 imageSource: "assets/img/hero3.jpg",
                 subtitle: "Conózcanos",
                 title: "@Tower"
-            }], $scope.sectionFeatures = [{
+            }], 
+            $scope.sectionFeatures = [{
                 button: {
                     content: "Ver más",
                     path: "#/services/networking"
@@ -337,24 +338,35 @@
                     $scope.formError = !1, $scope.formSuccess = !1, $scope.formMessage = ""
                 }, 3e3)
             }
-            $scope.sectionFeatures = [{
-               
+            $scope.sectionFeatures = [
+            // {   
+            //     button: {
+            //         content: "Ver más"
+            //     },
+            //     modalId: "test",
+            //     modalTemplate: "components/tower/modals/adsl-office.html",
+            //     description: "Internet ADSL @Office",
+            //     iconClass: "feature-tower--adsl-office"
+            // }, 
+            // {
+            //     button: {
+            //         content: "Ver más"
+            //     },
+            //     modalId: "test",
+            //     modalTemplate: "components/tower/modals/dedicated.html",
+            //     description: "Accesos Dedicados / Semidedicados",
+            //     iconClass: "feature-tower--dedicated"
+            // },  
+            {
                 button: {
                     content: "Ver más"
                 },
                 modalId: "test",
-                modalTemplate: "components/tower/modals/adsl-office.html",
-                description: "Internet ADSL @Office",
-                iconClass: "feature-tower--adsl-office"
-            }, {
-                button: {
-                    content: "Ver más"
-                },
-                modalId: "test",
-                modalTemplate: "components/tower/modals/dedicated.html",
-                description: "Accesos Dedicados / Semidedicados",
-                iconClass: "feature-tower--dedicated"
-            }, {
+                modalTemplate: "components/tower/modals/optic-fiber.html",
+                description: "Servicios de Internet por Fibra Optica",
+                iconClass: "feature-tower--optic-fiber"
+            },
+            {
                 button: {
                     content: "Ver más"
                 },
@@ -362,7 +374,8 @@
                 modalTemplate: "components/tower/modals/wireless.html",
                 description: "Servicios inalámbricos dedicados",
                 iconClass: "feature-tower--wireless"
-            }, {
+            }, 
+            {
                 button: {
                     content: "Ver más"
                 },
@@ -373,9 +386,11 @@
             }], $scope.modalControl = {
                 modalOpen: !1,
                 templateUrl: ""
-            }, $scope.openModal = function(modalTemplate) {
+            },
+            $scope.openModal = function(modalTemplate) {
                 $document.scrollTopAnimated(100), $scope.modalControl.modalOpen = !0, $scope.modalControl.templateUrl = modalTemplate
-            }, $scope.formMessage = "", $scope.formSuccess = !1, $scope.formError = !1, $scope.validateContactForm = function() {
+            }, 
+            $scope.formMessage = "", $scope.formSuccess = !1, $scope.formError = !1, $scope.validateContactForm = function() {
                 var error = 0;
                 _.each($scope.contactForm, function(field, index) {
                     _.isEmpty(field) && error++
