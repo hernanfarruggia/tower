@@ -20,7 +20,13 @@
 
 <div class="container--tower">
     <div class="container--tower-primary">
-        <div class="container--tower-secondary">
+        <div class="container--tower-secondary" style="text-align: center;">
+            <div style="text-align: center; color: white; padding: 20px 0; font-size: 30px; font-weight: bold; font-family: 'Gotham Rounded Medium'; letter-spacing: 5px;">
+                Internet para tu hogar | Internet para tu negocio
+            </div>
+            <div style="text-align: center; color: white; padding: 0 0 75px 0; font-size: 20px; font-family: 'Gotham Rounded Medium';">
+                Consultá por el servicio que mejor se adapte a tus necesidades
+            </div>
             <div class="feature-tower" ng-repeat="sectionFeature in sectionFeatures" ng-click="openModal(sectionFeature.modalTemplate)">
                 <div class="feature-tower--content">
                     <div class="feature-tower--icon" ng-class="sectionFeature.iconClass"></div>
@@ -39,19 +45,26 @@
 <div class="container">
     <div class="container-secondary">
         <div class="downloads">
-            <a class="downloads--item" target="_blank" href="assets/files/tower-beneficios.pdf">
-                <div class="downloads--item-icon"></div>
+            <a class="downloads--item" target="_blank" href="https://beneficios.lacapital.com.ar/compras/tecno/174_%40Tower/">
+                <div class="downloads--item-icon downloads--item-icon-discount"></div>
                 <div class="downloads--item-text">
                     Beneficios
                 </div>
             </a>
             <div class="downloads--item-separator"></div>
-            <a class="downloads--item" target="_blank" href="https://beneficios.lacapital.com.ar/compras/tecno/174_%40Tower/">
-                <div class="downloads--item-icon"></div>
+            <a class="downloads--item" target="_blank" href="https://correo.transdatos.net.ar">
+                <div class="downloads--item-icon downloads--item-icon-webmail"></div>
                 <div class="downloads--item-text">
-                    Promociones
+                    Webmail
                 </div>
             </a>
+            <div class="downloads--item-separator"></div>
+            <a class="downloads--item" href="#" onclick="(function(e){openNewModal(e, newModalTemplates['tower-pay-link-modal'])})(event)">
+                <div class="downloads--item-icon downloads--item-icon-payment"></div>
+                <div class="downloads--item-text">
+                    Pag&aacute; Online
+                </div>
+            </div>
         </div>
     </div>
 </div>
