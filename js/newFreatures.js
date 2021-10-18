@@ -11,8 +11,8 @@ function avoidCloseNewModal (event) {
 }
 
 function openNewModal (e, content) {
-  console.log(e, content);
   e.preventDefault();
+  $('html, body').animate({ scrollTop: 120}, 250);
   $.get(content, function (data) {
     newModalOpen = true;
     var newTemplate = getModalTemplate(data);
