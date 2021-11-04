@@ -26,7 +26,7 @@ function closeNewModal () {
 }
 
 function openPaymentLink () {
-  window.open('https://sandboxpp.asjservicios.com.ar:8110/SearchDeuda/796741', '_blank');
+  window.open('https://pagos.macroclickpago.com.ar/796741', '_blank');
 }
 
 function getModalTemplate (newTemplate) {
