@@ -29,10 +29,13 @@ if ($_POST && $_FILES) {
   $mail->Port = 465;                                    // TCP port to connect to
   $mail->Host = '200.47.45.14';                         // Specify main and backup SMTP servers
   $mail->Username = 'no-reply@transdatos.com.ar';       // SMTP username
-  $mail->Password = 'Nr3535';                           // SMTP password
+  $mail->Password = '$$#NRTms2538#$$';                  // SMTP password
 
   $mail->setFrom('no-reply@transdatos.com.ar', 'Transdatos Web');
-  $mail->addAddress('busqueda-rrhh@transdatos.com.ar');       // Add a recipient
+  $mail->addAddress('contacto@transdatos.com.ar');       // Add a recipient
+  // $mail->addAddress('busqueda-rrhh@transdatos.com.ar');       // Add a recipient
+  // $mail->addAddress('ceciliaf@transdatos.com.ar');
+  // $mail->addAddress('fsiri@transdatos.com.ar');
 
   $mail->addAttachment($attachment['tmp_name'], $attachment['name']);
 

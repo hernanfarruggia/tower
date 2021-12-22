@@ -26,10 +26,13 @@ if ($post) {
   $mail->Port = 465;                                    // TCP port to connect to
   $mail->Host = '200.47.45.14';                         // Specify main and backup SMTP servers
   $mail->Username = 'no-reply@transdatos.com.ar';       // SMTP username
-  $mail->Password = 'Nr3535';                           // SMTP password
+  $mail->Password = '$$#NRTms2538#$$';                  // SMTP password
 
   $mail->setFrom('no-reply@transdatos.com.ar', 'Transdatos Web');
   $mail->addAddress('contacto@transdatos.com.ar');       // Add a recipient
+  // $mail->addAddress('ceciliaf@transdatos.com.ar');
+  // $mail->addAddress('afabbri@transdatos.com.ar');
+  // $mail->addAddress('fsiri@transdatos.com.ar');
 
   $mail->isHTML(true);                                  // Set email format to HTML
 
